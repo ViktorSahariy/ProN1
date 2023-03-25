@@ -43,6 +43,10 @@ overflow: hidden;
 will-change: transform;
 }
 
+.layers__titel {
+	font-size: calc(var(--index));
+}
+
 .layers__base {
 	transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
 	
