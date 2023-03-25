@@ -5,70 +5,59 @@
 }
 
 :root {
-	--index: calc(1vw + 1vh);
-}
-
-@font-face {
-	font-family: primer_f;
-	src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,700&display=swap");
+  --index: calc(1vw + 1vh);
 }
 
 body {
-	background-color: #010101;
-	color: #fff;
-	font-family: primer_f;
-	letter-spacing: 1.55;
+  font-family: "Poppins", sans-serif;
+  background-color: #010101;
+  color: #fff;
 }
 
 .main-header {
-position: relative;
+  position: relative;
 }
 
 .layers {
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .layer {
-height: 100%;
-width: 100%;
-position: absolute;
-background-size: cover;
-background-position: center;
-overflow: hidden;
-/* position: relative; */
-will-change: transform;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /* position: relative; */
+  will-change: transform;
 }
 
 .layers__titel {
-	font-size: calc(var(--index));
-}
-
-.layers__base {
-	transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
-	
-}
-
-.layers__middle {
-	transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
-}
-
-.layars__transformer {
-	transform: translate3d(0, calc(var(--scrollTop) / 3.5), 0);
-}
-
-.layars__people {
-	transform: translate3d(0, calc(var(--scrollTop) / 4.5), 0);
-}
-
-.layer__header {
+	position: relative;
+  font-weight: 600;
+  margin-top: 568px;
+  font-size: 146px;
 	z-index: 1;
-	transform: translate3d(0, calc(var(--scrollTop) / 4.5), 0);
+	text-shadow: 0 0 40px #8D6D29;
 }
 
-.main-article {
-min-height: 100vh;
+.layers__bumble {
+  width: 727px;
+  height: 471px;
+  margin-right: 1061px;
+  margin-top: 357px;
+	transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+}
+
+.layers__transformer {
+  margin-left: 1169px;
+  margin-top: 316px;
+	width: 691px;
+	height: 512px;
+	transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
 }
