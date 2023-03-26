@@ -44,6 +44,7 @@ body {
   font-size: 146px;
 	z-index: 1;
 	text-shadow: 0 0 40px #8D6D29;
+	transform: translate3d(0, calc(var(--scrollTop) / 3.6), 0);
 }
 
 .layers__bumble {
@@ -60,4 +61,672 @@ body {
 	width: 691px;
 	height: 512px;
 	transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+}
+
+.main-article {
+	min-height: 100vh;
+}
+
+
+/* .right {
+	width: 50%;
+  
+  height: 1800px;
+  margin-top: -1500px; /*Start offset, put it at same as*/
+  
+  background: #191f27;
+  color: #35ff99;
+  float: left;
+  text-align: centeR;
+} */
+
+/*======================================
+MOON, stars 
+========================================*/
+@-moz-keyframes rotate_earth {
+ 0% {
+   background-position: 0px -2px;
+ }
+ 50% {
+   background-position: 205px -2px;
+ }
+ 100% {
+   background-position: 410px -2px;
+ }
+
+}
+
+@-webkit-keyframes "rotate_earth" {
+ 0% {
+   background-position: 0px -2px;
+ }
+ 50% {
+   background-position: 205px -2px;
+ }
+ 100% {
+   background-position: 410px -2px;
+ }
+
+}
+
+@-ms-keyframes "rotate_earth" {
+ 0% {
+   background-position: 0px -2px;
+ }
+ 50% {
+   background-position: 205px -2px;
+ }
+ 100% {
+   background-position: 410px -2px;
+ }
+
+}
+
+@-o-keyframes "rotate_earth" {
+ 0% {
+   background-position: 0px -2px;
+ }
+ 50% {
+   background-position: 205px -2px;
+ }
+ 100% {
+   background-position: 410px -2px;
+ }
+
+}
+@keyframes "rotate_earth" {
+ 0% {
+    background-position: 0px -2px;
+ }
+ 50% {
+    background-position: 205px -2px;
+ }
+ 100% {
+    background-position: 410px -2px;
+ }
+
+}
+body {
+  background: #fff url("http://lab.legomushroom.com/___img/sky_star2.jpg") 0px 0px;
+
+  
+    overflow-x: hidden;
+    margin: 0;
+
+    -webkit-animation: sky 40s linear infinite;
+    -moz-animation: sky 40s linear infinite;
+    -ms-animation: sky 40s linear infinite;
+    -o-animation: sky 40s linear infinite;
+    animation: sky 40s linear infinite;
+}
+
+body div#moon_holder {
+    position: absolute;
+    left: -30%;
+    bottom: 60px;
+    z-index: 6;
+
+    -webkit-animation: launch_moon 240s linear infinite;
+    -moz-animation: launch_moon 24s linear infinite;
+    -ms-animation: launch_moon 24s linear infinite;
+    -o-animation: launch_moon 24s linear infinite;
+    animation: launch_moon 24s linear infinite;
+}
+
+body div#moon_holder img#moon {
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+    position: absolute;
+    z-index: 0;
+
+    -webkit-animation: launch_moon_size 240s linear infinite;
+    -moz-animation: launch_moon_size 240s linear infinite;
+    -ms-animation: launch_moon_size 240s linear infinite;
+    -o-animation: launch_moon_size 240s linear infinite;
+    animation: launch_moon_size 240s linear infinite;
+
+   
+    box-shadow: -400px -30px 20px rgba(0,0,0,0.50);
+}
+
+body div#moon_holder div#moon_ball {
+    z-index: 1;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+    margin: 1px 1px 0px 0px;
+
+
+    box-shadow: inset 20px -10px 37px #000, inset 0 0 27px #000;
+
+    -webkit-animation: launch_moon_ball_size 240s linear infinite;
+    -moz-animation: launch_moon_ball_size 240s linear infinite;
+    -ms-animation: launch_moon_ball_size 240s linear infinite;
+    -o-animation: launch_moon_ball_size 240s linear infinite;
+    animation: launch_moon_ball_size 240s linear infinite;
+}
+
+body div#moon_holder div#moon_back {
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+    position: absolute;
+    z-index: 0;
+    background-color: #000;
+
+    -webkit-animation: launch_moon_ball_size 240s linear infinite;
+    -moz-animation: launch_moon_ball_size 240s linear infinite;
+    -ms-animation: launch_moon_ball_size 240s linear infinite;
+    -o-animation: launch_moon_ball_size 240s linear infinite;
+    animation: launch_moon_ball_size 240s linear infinite;
+}
+
+body div#earth_holder {
+    position: relative;
+    z-index: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    margin-bottom: 290%;
+    padding-left: 184%;
+}
+
+body div#earth_holder div#earth {
+    z-index: 2;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 338px;
+    background: url("http://lab.legomushroom.com/___img/11.jpg") 0px 0px;
+
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+
+
+    /* box-shadow: inset 1px -3px 14px rgba(0,0,0,0.60), inset 0 0 67px #000, inset 0 0 20px rgba(0,0,0,0.50), -400px -30px 130px rgba(0,0,0,0.50); */
+
+    -webkit-animation: rotate_earth 40s linear infinite;
+    -moz-animation: rotate_earth 40s linear infinite;
+    -ms-animation: rotate_earth 40s linear infinite;
+    -o-animation: rotate_earth 40s linear infinite;
+    animation: rotate_earth 40s linear infinite;
+}
+
+body div#earth_holder div#earth_glow {
+    z-index: 4;
+
+  
+    box-shadow: 0 0px 19px rgba(79,156,201,0.80);
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 306px;
+}
+
+body div#earth_holder div#earth_ball {
+    z-index: 3;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 302px;
+
+    opacity: 0.74;
+
+    
+    box-shadow: inset 40px -40px 80px #000, inset 20px -20px 100px #000;
+}
+
+
+
+@-moz-keyframes launch_moon {
+ 25% {
+   z-index: 6;
+ }
+ 50% {
+   left: 140%;
+   bottom: 600px;
+   z-index: 0;
+ }
+ 55% {
+   bottom: 680px;
+ }
+ 75% {
+   z-index: 0;
+ }
+ 100% {
+   left: -30%;
+   z-index: 6;
+   bottom: 100px;
+ }
+
+}
+
+@-webkit-keyframes "launch_moon" {
+ 25% {
+   z-index: 6;
+ }
+ 50% {
+   left: 140%;
+   bottom: 600px;
+   z-index: 0;
+ }
+ 55% {
+   bottom: 680px;
+ }
+ 75% {
+   z-index: 0;
+ }
+ 100% {
+   left: -30%;
+   z-index: 6;
+   bottom: 100px;
+ }
+
+}
+
+@-ms-keyframes "launch_moon" {
+ 25% {
+   z-index: 6;
+ }
+ 50% {
+   left: 140%;
+   bottom: 600px;
+   z-index: 0;
+ }
+ 55% {
+   bottom: 680px;
+ }
+ 75% {
+   z-index: 0;
+ }
+ 100% {
+   left: -30%;
+   z-index: 6;
+   bottom: 100px;
+ }
+
+}
+
+@-o-keyframes "launch_moon" {
+ 25% {
+   z-index: 6;
+ }
+ 50% {
+   left: 140%;
+   bottom: 600px;
+   z-index: 0;
+ }
+ 55% {
+   bottom: 680px;
+ }
+ 75% {
+   z-index: 0;
+ }
+ 100% {
+   left: -30%;
+   z-index: 6;
+   bottom: 100px;
+ }
+
+}
+@keyframes "launch_moon" {
+ 25% {
+    z-index: 6;
+ }
+ 50% {
+    left: 140%;
+       bottom: 600px;
+       z-index: 0;
+ }
+ 55% {
+    bottom: 680px;
+ }
+ 75% {
+    z-index: 0;
+ }
+ 100% {
+    left: -30%;
+       z-index: 6;
+       bottom: 100px;
+ }
+
+}
+
+
+@-moz-keyframes launch_moon_size {
+ 0% {
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
+ 50% {
+   -moz-transform: scale(1.2, 1.2);
+   transform: scale(1.2, 1.2);
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
+ 55% {
+   -moz-transform: scale(0.8, 0.8);
+   transform: scale(0.8, 0.8);
+   filter: alpha(opacity=70);
+   opacity: 0.7;
+ }
+ 75% {
+   -moz-transform: scale(0.7, 0.7);
+   transform: scale(0.7, 0.7);
+   filter: alpha(opacity=35);
+   opacity: 0.35;
+ }
+ 100% {
+   -moz-transform: scale(0.9, 0.9);
+   transform: scale(0.9, 0.9);
+   filter: alpha(opacity=70);
+   opacity: 0.7;
+ }
+
+}
+
+@-webkit-keyframes "launch_moon_size" {
+ 0% {
+  
+   opacity: 1;
+ }
+ 50% {
+   -webkit-transform: scale(1.2, 1.2);
+   transform: scale(1.2, 1.2);
+   
+   opacity: 1;
+ }
+ 55% {
+   -webkit-transform: scale(0.8, 0.8);
+   transform: scale(0.8, 0.8);
+
+   opacity: 0.7;
+ }
+ 75% {
+   -webkit-transform: scale(0.7, 0.7);
+   transform: scale(0.7, 0.7);
+  
+   opacity: 0.35;
+ }
+ 100% {
+   -webkit-transform: scale(0.9, 0.9);
+   transform: scale(0.9, 0.9);
+  
+   opacity: 0.7;
+ }
+
+}
+
+@-ms-keyframes "launch_moon_size" {
+ 0% {
+
+   opacity: 1;
+ }
+ 50% {
+   -ms-transform: scale(1.2, 1.2);
+   transform: scale(1.2, 1.2);
+
+   opacity: 1;
+ }
+ 55% {
+   -ms-transform: scale(0.8, 0.8);
+   transform: scale(0.8, 0.8);
+
+   opacity: 0.7;
+ }
+ 75% {
+   -ms-transform: scale(0.7, 0.7);
+   transform: scale(0.7, 0.7);
+
+   opacity: 0.35;
+ }
+ 100% {
+   -ms-transform: scale(0.9, 0.9);
+   transform: scale(0.9, 0.9);
+
+   opacity: 0.7;
+ }
+
+}
+
+@-o-keyframes "launch_moon_size" {
+ 0% {
+  
+   opacity: 1;
+ }
+ 50% {
+   -o-transform: scale(1.2, 1.2);
+   transform: scale(1.2, 1.2);
+   
+   opacity: 1;
+ }
+ 55% {
+   -o-transform: scale(0.8, 0.8);
+   transform: scale(0.8, 0.8);
+   
+   opacity: 0.7;
+ }
+ 75% {
+   -o-transform: scale(0.7, 0.7);
+   transform: scale(0.7, 0.7);
+  
+   opacity: 0.35;
+ }
+ 100% {
+   -o-transform: scale(0.9, 0.9);
+   transform: scale(0.9, 0.9);
+
+   opacity: 0.7;
+ }
+
+}
+@keyframes "launch_moon_size" {
+ 0% {
+
+       opacity: 1;
+ }
+ 50% {
+    -webkit-transform: scale(1.2, 1.2);
+       -moz-transform: scale(1.2, 1.2);
+       -o-transform: scale(1.2, 1.2);
+       -ms-transform: scale(1.2, 1.2);
+       transform: scale(1.2, 1.2);
+
+       opacity: 1;
+ }
+ 55% {
+    -webkit-transform: scale(0.8, 0.8);
+       -moz-transform: scale(0.8, 0.8);
+       -o-transform: scale(0.8, 0.8);
+       -ms-transform: scale(0.8, 0.8);
+       transform: scale(0.8, 0.8);
+
+       opacity: 0.7;
+ }
+ 75% {
+    -webkit-transform: scale(0.7, 0.7);
+       -moz-transform: scale(0.7, 0.7);
+       -o-transform: scale(0.7, 0.7);
+       -ms-transform: scale(0.7, 0.7);
+       transform: scale(0.7, 0.7);
+
+       opacity: 0.35;
+ }
+ 100% {
+    -webkit-transform: scale(0.9, 0.9);
+       -moz-transform: scale(0.9, 0.9);
+       -o-transform: scale(0.9, 0.9);
+       -ms-transform: scale(0.9, 0.9);
+       transform: scale(0.9, 0.9);
+
+       opacity: 0.7;
+ }
+
+}
+
+
+@-moz-keyframes launch_moon_ball_size {
+ 50% {
+   -moz-transform: scale(1.2, 1.2);
+   transform: scale(1.2, 1.2);
+ }
+ 55% {
+   -moz-transform: scale(0.8, 0.8);
+   transform: scale(0.8, 0.8);
+ }
+ 75% {
+   -moz-transform: scale(0.7, 0.7);
+   transform: scale(0.7, 0.7);
+ }
+ 100% {
+   -moz-transform: scale(0.9, 0.9);
+   transform: scale(0.9, 0.9);
+ }
+
+}
+
+@-webkit-keyframes "launch_moon_ball_size" {
+ 50% {
+   -webkit-transform: scale(1.2, 1.2);
+   transform: scale(1.2, 1.2);
+ }
+ 55% {
+   -webkit-transform: scale(0.8, 0.8);
+   transform: scale(0.8, 0.8);
+ }
+ 75% {
+   -webkit-transform: scale(0.7, 0.7);
+   transform: scale(0.7, 0.7);
+ }
+ 100% {
+   -webkit-transform: scale(0.9, 0.9);
+   transform: scale(0.9, 0.9);
+ }
+
+}
+
+@-ms-keyframes "launch_moon_ball_size" {
+ 50% {
+   -ms-transform: scale(1.2, 1.2);
+   transform: scale(1.2, 1.2);
+ }
+ 55% {
+   -ms-transform: scale(0.8, 0.8);
+   transform: scale(0.8, 0.8);
+ }
+ 75% {
+   -ms-transform: scale(0.7, 0.7);
+   transform: scale(0.7, 0.7);
+ }
+ 100% {
+   -ms-transform: scale(0.9, 0.9);
+   transform: scale(0.9, 0.9);
+ }
+
+}
+
+@-o-keyframes "launch_moon_ball_size" {
+ 50% {
+   -o-transform: scale(1.2, 1.2);
+   transform: scale(1.2, 1.2);
+ }
+ 55% {
+   -o-transform: scale(0.8, 0.8);
+   transform: scale(0.8, 0.8);
+ }
+ 75% {
+   -o-transform: scale(0.7, 0.7);
+   transform: scale(0.7, 0.7);
+ }
+ 100% {
+   -o-transform: scale(0.9, 0.9);
+   transform: scale(0.9, 0.9);
+ }
+
+}
+@keyframes "launch_moon_ball_size" {
+ 50% {
+    -webkit-transform: scale(1.2, 1.2);
+       -moz-transform: scale(1.2, 1.2);
+       -o-transform: scale(1.2, 1.2);
+       -ms-transform: scale(1.2, 1.2);
+       transform: scale(1.2, 1.2);
+ }
+ 55% {
+    -webkit-transform: scale(0.8, 0.8);
+       -moz-transform: scale(0.8, 0.8);
+       -o-transform: scale(0.8, 0.8);
+       -ms-transform: scale(0.8, 0.8);
+       transform: scale(0.8, 0.8);
+ }
+ 75% {
+    -webkit-transform: scale(0.7, 0.7);
+       -moz-transform: scale(0.7, 0.7);
+       -o-transform: scale(0.7, 0.7);
+       -ms-transform: scale(0.7, 0.7);
+       transform: scale(0.7, 0.7);
+ }
+ 100% {
+    -webkit-transform: scale(0.9, 0.9);
+       -moz-transform: scale(0.9, 0.9);
+       -o-transform: scale(0.9, 0.9);
+       -ms-transform: scale(0.9, 0.9);
+       transform: scale(0.9, 0.9);
+ }
+
+}
+
+
+@-moz-keyframes sky {
+ 50% {
+   background-position: 318px 212px;
+ }
+ 100% {
+   background-position: 635px 423px;
+ }
+
+}
+
+@-webkit-keyframes "sky" {
+ 50% {
+   background-position: 318px 212px;
+ }
+ 100% {
+   background-position: 635px 423px;
+ }
+
+}
+
+@-ms-keyframes "sky" {
+ 50% {
+   background-position: 318px 212px;
+ }
+ 100% {
+   background-position: 635px 423px;
+ }
+
+}
+
+@-o-keyframes "sky" {
+ 50% {
+   background-position: 318px 212px;
+ }
+ 100% {
+   background-position: 635px 423px;
+ }
+
+}
+@keyframes "sky" {
+ 50% {
+    background-position: 318px 212px;
+ }
+ 100% {
+    background-position: 635px 423px;
+ }
+
 }
